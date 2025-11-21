@@ -1,14 +1,30 @@
-
 import './App.css'; 
 
 function App() {
   return (
-      <div style={{ padding: '30px', textAlign: 'center' }}>
-            <h1>🥳 Welcome to your new site, Yasser!</h1>
-                  <p>The project is now live and ready for design.</p>
-                      </div>
-                        );
-                        }
+      <div className="landing-container">
+            <header className="main-header">
+                    <h1>TECPI Project</h1>
+                            <nav>
+                                      <a href="#features">Features</a>
+                                                <a href="#contact">Contact</a>
+                                                        </nav>
+                                                              </header>
 
-                        export default App;
-                        
+                                                                    <main className="main-content">
+                                                                            <section className="hero-section">
+                                                                                      <h2>Your Digital Presence Starts Here</h2>
+                                                                                                <p>We build exceptional e-commerce solutions and elite digital platforms.</p>
+                                                                                                          <button className="cta-button">Get Started Today</button>
+                                                                                                                  </section>
+                                                                                                                        </main>
+
+                                                                                                                              <footer className="main-footer">
+                                                                                                                                      <p>© 2025 Titan Elite Commerce. All rights reserved.</p>
+                                                                                                                                            </footer>
+                                                                                                                                                </div>
+                                                                                                                                                  );
+                                                                                                                                                  }
+
+                                                                                                                                                  export default App;
+                                                                                                                                                  

@@ -1,68 +1,270 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Custom CSS based on provided HTML structure */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap');
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* إعادة تعيين وتنسيقات عالمية */
+* {
+  box-sizing: border-box;
+    margin: 0;
+      padding: 0;
+      }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+      body {
+        font-family: 'Cairo', sans-serif;
+          background: #0a0e2b;
+            color: #fff;
+              overflow-x: hidden;
+                transition: all 0.5s;
+                }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+                canvas#bg {
+                  position: fixed;
+                    top: 0;
+                      left: 0;
+                        width: 100%;
+                          height: 100%;
+                            z-index: -1;
+                              opacity: 0.7;
+                              }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+                              header {
+                                text-align: center;
+                                  padding: 130px 20px 90px;
+                                  }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+                                  .logo-tec {
+                                    font-size: 6.8rem;
+                                      font-weight: 900;
+                                        background: linear-gradient(90deg, #00ff9d, #00c6ff, #0072ff);
+                                          -webkit-background-clip: text;
+                                            -webkit-text-fill-color: transparent;
+                                              text-shadow: 0 0 50px rgba(0, 198, 255, 0.6);
+                                                letter-spacing: 12px;
+                                                }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+                                                .dynamic-text {
+                                                  font-size: 2.5rem;
+                                                    font-weight: 900;
+                                                      background: linear-gradient(90deg, #00ff9d, #00c6ff);
+                                                        -webkit-background-clip: text;
+                                                          -webkit-text-fill-color: transparent;
+                                                            margin: 30px 0;
+                                                              min-height: 70px;
+                                                              }
+
+                                                              .btn {
+                                                                display: inline-block;
+                                                                  background: linear-gradient(90deg, #0072ff, #00c6ff);
+                                                                    color: #fff;
+                                                                      padding: 15px 45px;
+                                                                        margin: 10px;
+                                                                          border-radius: 50px;
+                                                                            font-weight: 700;
+                                                                              box-shadow: 0 8px 30px rgba(0, 114, 255, 0.5);
+                                                                                transition: 0.4s;
+                                                                                  text-decoration: none; /* أضيفت للتأكد من إزالة خط الرابط */
+                                                                                  }
+
+                                                                                  .btn:hover {
+                                                                                    transform: translateY(-6px);
+                                                                                      box-shadow: 0 20px 45px rgba(0, 114, 255, 0.7);
+                                                                                      }
+
+                                                                                      .pi-btn {
+                                                                                        background: linear-gradient(90deg, #ff8c00, #ff5e00);
+                                                                                        }
+
+                                                                                        .categories {
+                                                                                          max-width: 1400px;
+                                                                                            margin: 90px auto 120px;
+                                                                                              padding: 0 20px;
+                                                                                                display: grid;
+                                                                                                  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                                                                                                    gap: 30px;
+                                                                                                    }
+
+                                                                                                    .cat {
+                                                                                                      background: rgba(0, 198, 255, 0.15);
+                                                                                                        border: 2px solid rgba(0, 198, 255, 0.5);
+                                                                                                          border-radius: 26px;
+                                                                                                            overflow: hidden;
+                                                                                                              transition: 0.5s;
+                                                                                                              }
+
+                                                                                                              .cat h3 {
+                                                                                                                background: linear-gradient(135deg, #0072ff, #00c6ff);
+                                                                                                                  padding: 32px;
+                                                                                                                    font-size: 1.9rem;
+                                                                                                                      text-align: center;
+                                                                                                                        color: #fff;
+                                                                                                                          cursor: pointer;
+                                                                                                                            position: relative;
+                                                                                                                            }
+
+                                                                                                                            .cat h3::after {
+                                                                                                                              content: '▼';
+                                                                                                                                position: absolute;
+                                                                                                                                  right: 25px;
+                                                                                                                                    top: 50%;
+                                                                                                                                      transform: translateY(-50%);
+                                                                                                                                        transition: transform 0.3s;
+                                                                                                                                        }
+
+                                                                                                                                        .cat h3.open::after {
+                                                                                                                                          content: '▲';
+                                                                                                                                          }
+
+                                                                                                                                          .subdomains {
+                                                                                                                                            max-height: 0;
+                                                                                                                                              overflow: hidden;
+                                                                                                                                                transition: max-height 0.8s ease;
+                                                                                                                                                  background: rgba(0, 114, 255, 0.08);
+                                                                                                                                                  }
+
+                                                                                                                                                  .subdomains.open {
+                                                                                                                                                    max-height: 2000px;
+                                                                                                                                                      padding: 30px 20px;
+                                                                                                                                                      }
+
+                                                                                                                                                      .grid {
+                                                                                                                                                        display: flex;
+                                                                                                                                                          flex-direction: column;
+                                                                                                                                                            gap: 16px;
+                                                                                                                                                            }
+
+                                                                                                                                                            .item {
+                                                                                                                                                              background: rgba(255, 255, 255, 0.1);
+                                                                                                                                                                padding: 18px 22px;
+                                                                                                                                                                  border-radius: 16px;
+                                                                                                                                                                    text-align: center;
+                                                                                                                                                                      font-weight: 700;
+                                                                                                                                                                        font-size: 1.1rem;
+                                                                                                                                                                          transition: 0.4s;
+                                                                                                                                                                            border: 1px solid rgba(0, 198, 255, 0.3);
+                                                                                                                                                                              color: inherit; /* لضمان ظهور لون النص الأبيض في الوضع الداكن */
+                                                                                                                                                                                text-decoration: none;
+                                                                                                                                                                                }
+
+                                                                                                                                                                                .item:hover {
+                                                                                                                                                                                  background: rgba(0, 198, 255, 0.4);
+                                                                                                                                                                                    transform: translateX(10px);
+                                                                                                                                                                                      box-shadow: 0 0 30px rgba(0, 198, 255, 0.6);
+                                                                                                                                                                                      }
+
+                                                                                                                                                                                      /* Footer Contact */
+                                                                                                                                                                                      footer {
+                                                                                                                                                                                        margin-top: 80px;
+                                                                                                                                                                                          padding: 80px 20px 60px;
+                                                                                                                                                                                            background: rgba(0, 198, 255, 0.1);
+                                                                                                                                                                                              border-top: 2px solid rgba(0, 198, 255, 0.4);
+                                                                                                                                                                                              }
+
+                                                                                                                                                                                              .contact-grid {
+                                                                                                                                                                                                display: grid;
+                                                                                                                                                                                                  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                                                                                                                                                                                                    gap: 25px;
+                                                                                                                                                                                                      max-width: 1000px;
+                                                                                                                                                                                                        margin: 0 auto 50px;
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                        .contact-item {
+                                                                                                                                                                                                          background: rgba(0, 198, 255, 0.2);
+                                                                                                                                                                                                            border: 1px solid rgba(0, 198, 255, 0.5);
+                                                                                                                                                                                                              padding: 28px;
+                                                                                                                                                                                                                border-radius: 20px;
+                                                                                                                                                                                                                  font-size: 1.3rem;
+                                                                                                                                                                                                                    font-weight: 700;
+                                                                                                                                                                                                                      text-align: center;
+                                                                                                                                                                                                                        transition: 0.4s;
+                                                                                                                                                                                                                          text-decoration: none;
+                                                                                                                                                                                                                            color: inherit;
+                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                            .contact-item:hover {
+                                                                                                                                                                                                                              transform: translateY(-10px);
+                                                                                                                                                                                                                                box-shadow: 0 15px 40px rgba(0, 198, 255, 0.4);
+                                                                                                                                                                                                                                  background: rgba(0, 198, 255, 0.35);
+                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                  /* Light Mode Styles */
+                                                                                                                                                                                                                                  body.light-mode {
+                                                                                                                                                                                                                                    background: #f5f7ff;
+                                                                                                                                                                                                                                      color: #000;
+                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                      body.light-mode .cat {
+                                                                                                                                                                                                                                        background: rgba(0, 100, 255, 0.08);
+                                                                                                                                                                                                                                          border-color: rgba(0, 100, 255, 0.4);
+                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                          body.light-mode .item {
+                                                                                                                                                                                                                                            background: rgba(0, 0, 0, 0.06);
+                                                                                                                                                                                                                                              border-color: rgba(0, 100, 255, 0.3);
+                                                                                                                                                                                                                                                color: #000;
+                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                body.light-mode .item:hover {
+                                                                                                                                                                                                                                                  background: rgba(0, 100, 255, 0.3);
+                                                                                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                    body.light-mode .contact-item {
+                                                                                                                                                                                                                                                      background: rgba(0, 100, 255, 0.15);
+                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                      body.light-mode footer {
+                                                                                                                                                                                                                                                        background: rgba(0, 100, 255, 0.08);
+                                                                                                                                                                                                                                                          border-top-color: rgba(0, 100, 255, 0.3);
+                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                          #themeToggle {
+                                                                                                                                                                                                                                                            position: fixed;
+                                                                                                                                                                                                                                                              top: 25px;
+                                                                                                                                                                                                                                                                left: 25px;
+                                                                                                                                                                                                                                                                  background: linear-gradient(90deg, #00ff9d, #00c6ff);
+                                                                                                                                                                                                                                                                    border: none;
+                                                                                                                                                                                                                                                                      padding: 12px 25px;
+                                                                                                                                                                                                                                                                        border-radius: 40px;
+                                                                                                                                                                                                                                                                          color: #000;
+                                                                                                                                                                                                                                                                            font-weight: 800;
+                                                                                                                                                                                                                                                                              cursor: pointer;
+                                                                                                                                                                                                                                                                                z-index: 999;
+                                                                                                                                                                                                                                                                                  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+                                                                                                                                                                                                                                                                                    transition: 0.3s;
+                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                    #themeToggle:hover {
+                                                                                                                                                                                                                                                                                      transform: scale(1.08);
+                                                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                                                      /* Media Queries */
+                                                                                                                                                                                                                                                                                      @media (max-width: 768px) {
+                                                                                                                                                                                                                                                                                        header {
+                                                                                                                                                                                                                                                                                            padding: 90px 15px 60px;
+                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                                .logo-tec {
+                                                                                                                                                                                                                                                                                                    font-size: 4.5rem;
+                                                                                                                                                                                                                                                                                                        letter-spacing: 6px;
+                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                            .dynamic-text {
+                                                                                                                                                                                                                                                                                                                font-size: 2rem;
+                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                    .categories {
+                                                                                                                                                                                                                                                                                                                        gap: 20px;
+                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                            .cat h3 {
+                                                                                                                                                                                                                                                                                                                                font-size: 1.5rem;
+                                                                                                                                                                                                                                                                                                                                    padding: 25px;
+                                                                                                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                                                                                                        .contact-item {
+                                                                                                                                                                                                                                                                                                                                            font-size: 1.1rem;
+                                                                                                                                                                                                                                                                                                                                                padding: 20px;
+                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                  @media (max-width: 480px) {
+                                                                                                                                                                                                                                                                                                                                                    .logo-tec {
+                                                                                                                                                                                                                                                                                                                                                        font-size: 3.5rem;
+                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                            .dynamic-text {
+                                                                                                                                                                                                                                                                                                                                                                font-size: 1.5rem;
+                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                    .contact-grid {
+                                                                                                                                                                                                                                                                                                                                                                        grid-template-columns: 1fr;
+                                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                                          

@@ -1,42 +1,100 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+:root {
+    --primary-color: #7b1fa2; /* لون بنفسجي أساسي */
+      --secondary-color: #00bcd4; /* لون سماوي ثانوي */
+        --text-light: #ffffff;
+          --text-dark: #333333;
+            --bg-dark: #1e1e1e; /* خلفية داكنة */
+              --font-family: sans-serif;
+              }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+              /* إعادة تعيين وتنسيقات عامة */
+              * {
+                box-sizing: border-box;
+                  margin: 0;
+                    padding: 0;
+                    }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+                    body {
+                      font-family: var(--font-family);
+                        background-color: var(--bg-dark);
+                          color: var(--text-light);
+                            min-height: 100vh;
+                            }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+                            /* تنسيقات رأس الصفحة (Header) */
+                            .main-header {
+                              display: flex;
+                                justify-content: space-between;
+                                  align-items: center;
+                                    padding: 20px 30px;
+                                      background-color: #252525;
+                                        border-bottom: 1px solid var(--primary-color);
+                                        }
 
-.card {
-  padding: 2em;
-}
+                                        .main-header h1 {
+                                          font-size: 1.5rem;
+                                            color: var(--primary-color);
+                                            }
 
-.read-the-docs {
-  color: #888;
+                                            .main-header nav a {
+                                              color: var(--text-light);
+                                                text-decoration: none;
+                                                  margin-left: 20px;
+                                                    transition: color 0.3s;
+                                                    }
+
+                                                    .main-header nav a:hover {
+                                                      color: var(--secondary-color);
+                                                      }
+
+                                                      /* تنسيقات قسم البطل (Hero Section) */
+                                                      .main-content {
+                                                        display: flex;
+                                                          justify-content: center;
+                                                            align-items: center;
+                                                              text-align: center;
+                                                                padding: 80px 30px;
+                                                                  min-height: calc(100vh - 120px); 
+                                                                  }
+
+                                                                  .hero-section h2 {
+                                                                    font-size: 2.5rem;
+                                                                      margin-bottom: 15px;
+                                                                        color: var(--secondary-color);
+                                                                        }
+
+                                                                        .hero-section p {
+                                                                          font-size: 1.1rem;
+                                                                            margin-bottom: 30px;
+                                                                              max-width: 600px;
+                                                                                margin-left: auto;
+                                                                                  margin-right: auto;
+                                                                                  }
+
+                                                                                  .cta-button {
+                                                                                    background-color: var(--primary-color);
+                                                                                      color: var(--text-light);
+                                                                                        border: none;
+                                                                                          padding: 12px 25px;
+                                                                                            font-size: 1rem;
+                                                                                              border-radius: 5px;
+                                                                                                cursor: pointer;
+                                                                                                  transition: background-color 0.3s, transform 0.2s;
+                                                                                                  }
+
+                                                                                                  .cta-button:hover {
+                                                                                                    background-color: #9c27b0; 
+                                                                                                      transform: translateY(-2px);
+                                                                                                      }
+
+                                                                                                      /* تنسيقات تذييل الصفحة (Footer) */
+                                                                                                      .main-footer {
+                                                                                                        text-align: center;
+                                                                                                          padding: 20px;
+                                                                                                            background-color: #252525;
+                                                                                                              border-top: 1px solid #333;
+                                                                                                                font-size: 0.9rem;
+                                                                                                                  color: #aaaaaa;
+                                                                                                                  }
+                                                                                                                  
 }
